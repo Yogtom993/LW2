@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Навчальний сайт TechStore для лабораторної роботи №2 з CSS Grid Layout, БЕМ та медіазапитів">
+  <meta name="author" content="Курка Євгеній">
+  <title>TechStore — контакти</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="TechStore">
+    <h1 class="header__title">TechStore — контакти</h1>
+    <p class="header__subtitle">Каталог електроніки з адаптивною CSS Grid-структурою</p>
+  </header>
+
+  <input class="nav__toggle" type="checkbox" id="menu-toggle">
+<label class="nav__button" for="menu-toggle">☰ Меню</label>
+<nav class="nav">
+  <a class="nav__link " href="index.html">Головна</a>
+  <a class="nav__link " href="catalog.html">Каталог</a>
+  <a class="nav__link nav__link_active" href="contacts.html">Контакти</a>
+  <a class="nav__link " href="grid.html">Grid-сторінка</a>
+</nav>
+
+  <main class="content">
+    <section class="card" id="top">
+      <h2 class="card__title">Контакти та форма заявки</h2>
+      <p class="card__text">Форма залишена як частина сайту з ЛР1, але її оформлення адаптовано до загального стилю ЛР2.</p>
+      <form class="form" action="#" method="post">
+        <label class="form__label">Ім'я
+          <input class="form__input" type="text" name="name" placeholder="Ваше ім'я" required>
+        </label>
+        <label class="form__label">Email
+          <input class="form__input" type="email" name="email" placeholder="name@example.com" required>
+        </label>
+        <label class="form__label">Телефон
+          <input class="form__input" type="tel" name="phone" placeholder="+380501112233" pattern="\+380[0-9]{9}" required>
+        </label>
+        <label class="form__label">Бажаний товар
+          <input class="form__input" type="text" name="product" placeholder="Наприклад, Lenovo IdeaPad Slim 3">
+        </label>
+        <button class="button" type="submit">Надіслати заявку</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="sidebar">
+    <h2 class="sidebar__title">TechStore</h2>
+    <p class="sidebar__text">Навчальний каталог продукції компанії: ноутбуки, смартфони, навушники та аксесуари.</p>
+    <a class="sidebar__link" href="catalog.html">Перейти до каталогу</a>
+  </aside>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 TechStore. Лабораторна робота №2</p>
+  </footer>
+
+  <a class="fixed-button" href="#top" title="Вгору">↑</a>
+</body>
+</html>

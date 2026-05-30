@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #172033;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --soft: #eff6ff;
+  --border: #dbeafe;
+  --text: #172033;
+}
+
+body.page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Verdana, sans-serif;
+  background: #f8fafc url("images/bg.svg");
+  color: var(--text);
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "content aside"
+    "footer footer";
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 18px;
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #172033, #2563eb);
+  color: #fff;
+  padding: 24px 6%;
+  text-align: center;
+}
+
+.header__logo {
+  width: 220px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.header__title {
+  margin: 12px 0 6px;
+  font-size: 34px;
+}
+
+.header__subtitle {
+  margin: 0;
+  opacity: .9;
+}
+
+.nav__toggle,
+.nav__button {
+  display: none;
+}
+
+.nav {
+  grid-area: nav;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: 12px;
+  transition: background-color .2s, transform .2s;
+}
+
+.nav__link:hover,
+.nav__link_active {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+.content {
+  grid-area: content;
+  margin-left: 6%;
+  display: grid;
+  gap: 18px;
+}
+
+.sidebar {
+  grid-area: aside;
+  margin-right: 6%;
+  align-self: start;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.08);
+}
+
+.sidebar__title {
+  margin-top: 0;
+}
+
+.sidebar__link {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.08);
+}
+
+.card_hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 22px;
+}
+
+.card__title {
+  margin-top: 0;
+  color: var(--dark);
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+}
+
+.category-grid,
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.06);
+}
+
+.product-card__image {
+  width: 100%;
+  border-radius: 15px;
+  background: var(--soft);
+}
+
+.product-card__title {
+  margin-bottom: 4px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.table__head,
+.table__cell {
+  border: 1px solid #94a3b8;
+  padding: 10px;
+  text-align: left;
+}
+
+.table__head {
+  background: #dbeafe;
+}
+
+.gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery__image {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  transition: transform .3s, filter .3s, box-shadow .3s;
+}
+
+.gallery__image:hover {
+  transform: scale(1.08);
+  filter: saturate(1.25) brightness(1.05);
+  box-shadow: 0 12px 28px rgba(37,99,235,.25);
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.form__label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid #bcd0f7;
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+}
+
+.layout-demo {
+  display: grid;
+  grid-template-areas:
+    "demo-header demo-header"
+    "demo-nav demo-aside"
+    "demo-main demo-aside"
+    "demo-footer demo-footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+
+.layout-demo__item {
+  background: #dbeafe;
+  border: 2px solid var(--blue);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.layout-demo__header { grid-area: demo-header; }
+.layout-demo__nav { grid-area: demo-nav; }
+.layout-demo__main { grid-area: demo-main; min-height: 150px; }
+.layout-demo__aside { grid-area: demo-aside; }
+.layout-demo__footer { grid-area: demo-footer; }
+
+.fixed-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .3s, border-radius .3s, background-color .3s;
+}
+
+.fixed-button:hover {
+  transform: rotate(12deg) scale(1.2);
+  border-radius: 12px;
+  background: var(--blue-dark);
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background: var(--dark);
+  color: #fff;
+  padding: 18px;
+}
+
+@media (max-width: 768px) {
+  body.page {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .content,
+  .sidebar {
+    margin: 0 5%;
+  }
+
+  .card_hero {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid,
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .layout-demo {
+    grid-template-areas:
+      "demo-header"
+      "demo-nav"
+      "demo-main"
+      "demo-aside"
+      "demo-footer";
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav__button {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    background: var(--blue);
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav__toggle:checked + .nav__button + .nav {
+    display: flex;
+  }
+
+  .category-grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .layout-demo {
+    grid-template-columns: 1fr 1fr;
+  }
+}

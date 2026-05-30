@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Навчальний сайт TechStore для лабораторної роботи №2 з CSS Grid Layout, БЕМ та медіазапитів">
+  <meta name="author" content="Курка Євгеній">
+  <title>TechStore — каталог</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="TechStore">
+    <h1 class="header__title">TechStore — каталог</h1>
+    <p class="header__subtitle">Каталог електроніки з адаптивною CSS Grid-структурою</p>
+  </header>
+
+  <input class="nav__toggle" type="checkbox" id="menu-toggle">
+<label class="nav__button" for="menu-toggle">☰ Меню</label>
+<nav class="nav">
+  <a class="nav__link " href="index.html">Головна</a>
+  <a class="nav__link nav__link_active" href="catalog.html">Каталог</a>
+  <a class="nav__link " href="contacts.html">Контакти</a>
+  <a class="nav__link " href="grid.html">Grid-сторінка</a>
+</nav>
+
+  <main class="content">
+    <section class="card" id="top">
+      <h2 class="card__title">Таблиця товарів</h2>
+      <p class="card__text">У таблиці наведено реалістичні навчальні назви техніки та орієнтовні ціни для каталогу TechStore.</p>
+      <table class="table">
+        <tr><th class="table__head">Товар</th><th class="table__head">Категорія</th><th class="table__head">Ціна</th></tr>
+        <tr><td class="table__cell">Apple MacBook Air 13 M2 8/256 GB</td><td class="table__cell">Ноутбук</td><td class="table__cell">39 999 грн</td></tr>
+        <tr><td class="table__cell">Lenovo IdeaPad Slim 3 15AMN8 16/512 GB</td><td class="table__cell">Ноутбук</td><td class="table__cell">24 999 грн</td></tr>
+        <tr><td class="table__cell">ASUS Vivobook 15 X1504VA i5/16/512 GB</td><td class="table__cell">Ноутбук</td><td class="table__cell">29 999 грн</td></tr>
+        <tr><td class="table__cell">Samsung Galaxy A55 5G 8/256 GB</td><td class="table__cell">Смартфон</td><td class="table__cell">18 999 грн</td></tr>
+        <tr><td class="table__cell">Xiaomi Redmi Note 13 Pro 8/256 GB</td><td class="table__cell">Смартфон</td><td class="table__cell">12 999 грн</td></tr>
+        <tr><td class="table__cell">Apple AirPods 4</td><td class="table__cell">Навушники</td><td class="table__cell">7 499 грн</td></tr>
+        <tr><td class="table__cell">Logitech Signature M650 Wireless</td><td class="table__cell">Аксесуар</td><td class="table__cell">1 699 грн</td></tr>
+        <tr><td class="table__cell">Kingston DataTraveler Exodia 128 GB</td><td class="table__cell">Накопичувач</td><td class="table__cell">399 грн</td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 class="card__title">Галерея з CSS-анімацією</h2>
+      <p class="card__text">При наведенні курсору зображення збільшується та стає насиченішим.</p>
+      <div class="gallery">
+        <img class="gallery__image" src="images/laptop.svg" alt="Ноутбук">
+        <img class="gallery__image" src="images/phone.svg" alt="Смартфон">
+        <img class="gallery__image" src="images/audio.svg" alt="Навушники">
+        <img class="gallery__image" src="images/accessory.svg" alt="Аксесуар">
+      </div>
+    </section>
+  </main>
+
+  <aside class="sidebar">
+    <h2 class="sidebar__title">TechStore</h2>
+    <p class="sidebar__text">Навчальний каталог продукції компанії: ноутбуки, смартфони, навушники та аксесуари.</p>
+    <a class="sidebar__link" href="catalog.html">Перейти до каталогу</a>
+  </aside>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 TechStore. Лабораторна робота №2</p>
+  </footer>
+
+  <a class="fixed-button" href="#top" title="Вгору">↑</a>
+</body>
+</html>
